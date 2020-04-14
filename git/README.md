@@ -1,9 +1,12 @@
 # GIT BASIC COMMANDS
 
 ### `git init`
-- Usage
-    - git init
-        - init a repository
+```
+> $ git init
+
+*Initi a repository*
+
+```
 
 ### `git add`
 - Usage
