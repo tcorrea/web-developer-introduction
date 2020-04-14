@@ -1,110 +1,133 @@
-# LINUX - BASIC TERMINAL COMMANDS
+# LINUX - BASIC COMMANDS
 
-### `man`
+## man 
+`man` manual command.
+
+Shows you the manual for the following command. This is very helpful when trying to figure out how an unfamiliar command works. For example, type `man ls` for everything you need to know about the ls command. Type `q` to exit.
 Manual.
-- exemple
-    - `man touch`
 
-### `touch`
+## touch
+`touch` creates file.
 
-### `ls`
-List directories and files.
-*syntax* *`$ ls [options] [file|dir]`*
-- options
-    - `ls -a` *list all files (including hidden file)*
-    - `ls -l` *list with long format - show permissions*
-    - `ls -la` *list long format including hidden files*
+The touch command is used to create a file. It can be anything, from an empty txt file to an empty zip file. `touch new.txt` will create a new file with name new.
 
+## ls
+`ls` list command.
 
-### `cd`
-Change Directory.
-*syntax* *`$ cd [directory]`*
-- exemples
-    - `$ cd` - *Change to home directory*
-    - `$ cd ~` - *Also change to home directory (~ Tilde expansion)*
-    - `$ cd /` - *Change to root directory*
-    - `$ cd ..` - *Change to parente directory*
-    - `$ cd Documents/Exemple` - *Change to subdirectory*
+Type `ls` and the contents of the current directory will be displayed.
 
-### `mkdir`
-Make Directories.
-*syntax* *`$ mkdir [options] [directory]`*
+## cd
+`cd` change directory.
 
-### `rm`
-Remove - Removes each file specified on the command line. By default, it does not remove directories.
-*syntax* *`$ rm [options] [file | directory]`*
-- exemple
-    - `$ rm file` - *Remove the file*
-    - `$ rm -Rf directory` - *Remove the diretory and their cotents* 
-    - `-RF = --recursive --force`
+`cd` followed by a directory or file path will take you inside that directory(folder).
 
-### `mv`
-mv command moves and renames files and directories.
-*syntax* *`mv [options] source destination`* 
-- options
-    - `-f` *force move by overwriting destination file without prompt*
-    - `-i` *interactive prompt before overwrite* 
-    - `-u` *update - move when source is newer than destination*
-    - `-v` *verbose - print source and destination files*
+`$ cd` - *Change to home directory*
 
-### `chown`
-change owner
+`$ cd ~` - *Also change to home directory (~ Tilde expansion)*
 
-### `pwd` 
-print working directory
+`$ cd /` - *Change to root directory*
 
-### `whoami` 
-who am i?
+`$ cd ..` - *Change to parente directory*
 
-### `df` 
-reporting file system disk.
-- options
-    - `-h` *human readable format*
+`$ cd Documents/Exemple` - *Change to subdirectory*
 
-### `ln -s` 
-creates a symbolic link to file target with the name LINKNAME.
-- exemple
-    - `$ ln -s file.txt file2.txt`
+## mkdir 
+`mkdir` make directory.
 
-### `which` 
-is used to locate the executable file.
-- exemple
-    - `$ which python` output `/usr/bin/python`
+This command, followed by the name you wish to name your directory, creates a new directory. `mkdir folder1` will make a new directory called folder1.
 
-### `tail`
-output the last part of file given.
-*syntax* *`tail [options] file`*
-- options
-    - `-f` *watch a file changes*
+## rm 
+`rm` remove.
 
-## Environment Variable
-`$HOME`
-`$PATH` 
+This command removes files, not directories. `rm file.txt` will remove the file named file.txt as long as it exists and is in the current directory.
 
-## Read Files
-`less` *is a command that displays file contents*
+`$ rm file` - *Remove the file*
 
-## Pipe |
+`$ rm -Rf directory` - *Remove the diretory and their cotents* 
+
+`-Rf --recursive --force`
+
+## mv
+`mv` move
+
+Use the mv command to move files through the command line. We can also use the `mv` command to *rename* a file. For example, if we want to rename the file “text” to “new”, we can use `mv text new`.
+
+`-f` *force move by overwriting destination file without prompt*
+
+`-i` *interactive prompt before overwrite* 
+
+`-u` *update - move when source is newer than destination*
+
+`-v` *verbose - print source and destination files*
+
+## chown
+`chown` change owner.
+
+## pwd 
+`pwd` print working directory
+
+Type `pwd` to display the path to your current directory.
+
+## whoami
+`whoami` who am i?
+
+## df
+`df` reporting file system disk.
+
+`-h` flag *human readable format*
+
+## ln 
+`ln -s` creates a symbolic link to file target with the name LINKNAME.
+
+```
+$ ln -s file.txt file2.txt
+```
+
+## which
+`which` is used to locate the executable file.
+```
+$ which python` output `/usr/bin/python
+```
+## tail
+`tail` output the last part of file given.
+
+```
+$ tail [options] file
+```
+`-f` flag *watch a file changes*
+
+## less 
+`less` view file content
+
+Use `less filename.txt` to view contents of a file and navigate through them. By default, less will go through the file page by page.
+
+## pipe 
+```
 ps aux | ag palavra
 ps aux | ag palavra | awk '{print $2}'
+```
 
-## Grep
-globally search a regular expression and print.
+## grep
+`grep` globally search a regular expression and print.
 
-- silversearcher-ag
-    - do the same of grep
+## silversearcher-ag
+Do the same of grep
 
 ## Terminal - tmux
-- exemple
-    - `$ tmux ls` *list sessions*
-    - `$ tmux attach-session -t session-number` *recupera session*
-    - `$ tmux kill-session -t session-number` *destroy sessions*
-    - more [about tmux](https://gist.github.com/MohamedAlaa/2961058) 
 
-//TODO
-echo "texto" > file.txt - sobre escreve o arquivo
-echo "texto" >> file.txt - append no final do arquivo
+`$ tmux ls` *list sessions*
 
-bash scripting cheatsheet
-sudo service redis-server stop / start / status
-sudo service postgresql stop / start / status
+`$ tmux attach-session -t session-number` *get session*
+
+`$ tmux kill-session -t session-number` *destroy sessions*
+
+more [about tmux](https://gist.github.com/MohamedAlaa/2961058) 
+
+
+## Linux Resources
+
+[Free Code Camp](https://guide.freecodecamp.org/linux)
+
+
+
+[bash scripting cheatsheet](https://devhints.io/bash)
