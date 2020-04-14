@@ -4,9 +4,9 @@
 ```
 > $ git init
 
-*Initi a repository*
-
 ```
+> *Initi a repository*
+
 
 ### `git add`
 - Usage
