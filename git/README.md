@@ -17,12 +17,12 @@ Stage all changes in *file* for the next commit.
 ```
 $ git add [directory]
 ```
-Stage all changes in *directory* fot the next commit. 
+Stage all changes in *directory* for the next commit. 
 
 More about [git add](https://git-scm.com/docs/git-add)
 
 ## git commit
-`git commit` will save all stage changes, alogn with a brief description from the user, in a "commit" to local repository.
+`git commit` will save all stage changes, along with a brief description from the user, in a "commit" to local repository.
 
 ```
 $ git commit -m "commit message"
@@ -36,7 +36,7 @@ Stages all modified files to be committed.
 More about git commit - [freecodecamp](https://guide.freecodecamp.org/git/git-commit) and [official documentation](https://git-scm.com/docs/git-commit)
 
 ## git status
-`git status` displays the state od the working directory and the staging area.
+`git status` displays the state of the working directory and the staging area.
 
 ```
 $ git status
@@ -137,7 +137,7 @@ $ git merge [branch-name]
 More about [git merge](https://guide.freecodecamp.org/git/git-merge)
 
 ## git push
-`git push` allows yout ot send (or push) the commits from your local branch in your local git repository to the remote repository.
+`git push` allows you to send (or push) the commits from your local branch in your local git repository to the remote repository.
 
 ```
 $ git push [repo-name] [branch-name] 
